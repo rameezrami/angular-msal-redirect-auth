@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <h2>App Dashboard(<small>Auth only page</small>)</h2>
+        <hr />
+        <ng-container *ngIf="account">
+            <div class="d-flex flex-row mb-5">
+                <div class="flex-grow-1">
+                    <h4>Name: {{account.name}}</h4>
+                    <h4>Email: {{account.username}}</h4>
+                </div>
+                <div class="">
+                    <button class="btn btn-lg btn-outline-danger mb-3" type="button" (click)="logout()">MSAL Logout
+                    </button>
+                </div>
+            </div>
+            <h5 class="mt-5">JSON Response</h5>
+            <hr />
+            <pre>{{account | json}}</pre>
+        </ng-container>
+    </div>
+</div>
